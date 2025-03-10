@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=file_export" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nb">
+                <div class="logo">
+
+                    <p id="name">Expense Tracker</p>
+                    <img src="icons8-expense-50.png" alt="" width="20px" height="30px">
+                </div>
+                <ul id="options">
+                    <li id="exp">Export</li>
+                   <img src="icons8-export-csv-50.png" alt="" width="45px" height="30px"> 
+                    <li id="custom">Custom View</li>
+                    <li id="monthlyTotal">Total: $0</li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container" id="app">
+            <div class="inputs">
+
+                <label for="first-input" class="lab">Enter Expense Name </label>
+                <input type="text" placeholder="Expense Name" id="first-input">
+                <label for="category" class="lab">Select Category</label>
+                <select id="sec-input">
+                    <option value="Groceries">🛒 Groceries</option>
+                    <option value="Food & Dining">🍔 Food & Dining</option>
+                    <option value="Transport">🚗 Transport</option>
+                    <option value="Rent & Utilities">🏠 Rent & Utilities</option>
+                    <option value="Health & Medical">💊 Health & Medical</option>
+                    <option value="Education">📚 Education</option>
+                    <option value="Family & Kids">🍼 Family & Kids</option>
+
+                </select>
+                <label for="third-input" class="lab">Enter Amount</label>
+                <input type="number" placeholder="Amount" id="third-input">
+                <label for="fourth-input" class="lab">Enter Date</label>
+                <input type="date" id="fourth-input">
+            </div>
+            <div class="buttons">
+
+                <button id="ADD-btn" class="btn">Add Expense</button>
+                <button id="REM-btn" class="btn">Remove Expense</button>
+                <button id="VIEW1-btn" class="btn">View Daily Expense</button>
+                <button id="VIEW2-btn" class="btn">View Monthly Expense</button>
+
+            </div>
+        </div>
+
+      <!-- Expense Modal (Initially Hidden) -->
+<div id="expenseModal" class="modal hidden">  
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <div id="expenseList"></div>
+        <canvas id="expenseChart"></canvas>
+    </div>
+</div>
+
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
